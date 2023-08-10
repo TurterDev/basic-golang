@@ -1,0 +1,35 @@
+//defer คือ การทำงานให้คำสั่งนั้นๆ ไปทำงานที่ส่วนท้ายสุดของ function หรือ ส่วนท้ายสุดของการทำงาน
+//defer จะทำงานแบบ LIFO
+
+package main
+
+import "fmt"
+
+func add(value1, value2 float64) {
+	result := value1 + value2
+	fmt.Println("result :", result)
+}
+
+func loop() {
+	for i := 0; i < 10; i++ {
+		fmt.Println("i =", i)
+	}
+}
+
+// defer ใช้ใน function
+func deferloop() {
+	for j := 0; j < 10; j++ {
+		defer fmt.Println("j =", j)
+	}
+}
+
+func main() {
+	fmt.Println("Welcome to Calculator")
+	defer fmt.Println("End")
+	defer add(10, 20)
+	defer add(15, 15)
+	defer add(12, 12)
+
+	loop()
+	deferloop()
+}

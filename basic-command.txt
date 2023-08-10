@@ -1,0 +1,21 @@
+คำสั่งที่ใช้ดู list คำสั่งอื่นๆ 
+- go
+คำสั่งที่เก็บ modules 
+- go mod init github.com/TurterDev/hello
+คำสั่งที่ใช้ในการ build ไฟล์ให้เป็น binary
+- go build .\main.go
+ตัวช่วย monitoring , auto complie file
+- go get github.com/liudng/dogo
+
+ตัวแปร
+- number
+- string 
+- boolean
+- array 
+- slice 
+- struct
+- pointer 
+- fucntion 
+- interface 
+- map
+- channel 
